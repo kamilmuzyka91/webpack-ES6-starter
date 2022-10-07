@@ -1,22 +1,21 @@
 const path = require("path");
-const webpack = require("webpack"); //to access built-in plugins
-
+const webpack = require("webpack");
 module.exports = {
   mode: "development",
 
-  entry: "./src/index.js", // wejście
+  entry: "./src/index.js", //
   output: {
-    filename: "main.js", // wyjście
-    path: path.resolve(__dirname, "dist/js/"), // wyjście js w tym katalogu
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist/js/"),
   },
 
   devServer: {
-    static: "./dist", // serwuj wszystkie pliki z tego katalogu
+    static: "./dist",
     watchFiles: ["src/**/*.html", "src/**/*.css", "src/**/*.js"],
     hot: true,
-    compress: true, // kompresuj wszystko co jest obsługiwane
+    compress: true,
     port: 3000,
-    open: true, // otwórz okno automatycznie
+    open: true,
   },
 
   module: {
